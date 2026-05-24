@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "name": "Mobility & Warmup",
+      "exercises": [
+        { "id": 0, "name": "Cat-Cow with Lateral Shift" },
+        { "id": 1, "name": "Thoracic Bench Stretch" },
+        { "id": 2, "name": "Sidelying Thoracic Windmill" },
+        { "id": 3, "name": "Quadruped Bird-Dog" }
+      ]
+    },
+    {
+      "name": "Power & Full Body",
+      "exercises": [
+        { "id": 4, "name": "Low-Level Pogo Hop" },
+        { "id": 5, "name": "Kettlebell Swing" },
+        { "id": 6, "name": "Single-Arm Kettlebell Snatch" },
+        { "id": 7, "name": "Single-Arm Kettlebell Clean" },
+        { "id": 8, "name": "Medicine Ball Slam" },
+        { "id": 9, "name": "Dumbbell Farmer’s Carry" },
+        { "id": 10, "name": "Single-Arm Kettlebell Suitcase Carry" }
+      ]
+    },
+    {
+      "name": "Legs",
+      "exercises": [
+        { "id": 11, "name": "Single-Leg Glute Bridge" },
+        { "id": 12, "name": "Dumbbell Jump Squat" },
+        { "id": 13, "name": "Rim Jump (or Box Jump)" },
+        { "id": 14, "name": "Barbell Conventional Deadlift" },
+        { "id": 15, "name": "Barbell Box Squat" },
+        { "id": 16, "name": "Heavy Kettlebell Goblet Squat" },
+        { "id": 17, "name": "Dumbbell Bulgarian Split Squat" },
+        { "id": 18, "name": "Dumbbell Romanian Deadlift" },
+        { "id": 19, "name": "Dumbbell Walking Lunge" }
+      ]
+    },
+    {
+      "name": "Back",
+      "exercises": [
+        { "id": 20, "name": "Weighted Pull-Up" },
+        { "id": 21, "name": "Inverted Bodyweight Row" },
+        { "id": 22, "name": "Dumbbell Gorilla Row" },
+        { "id": 23, "name": "Single-Arm Dumbbell Row" },
+        { "id": 24, "name": "Chest-Supported Dumbbell Row" }
+      ]
+    },
+    {
+      "name": "Chest",
+      "exercises": [
+        { "id": 25, "name": "Dumbbell Floor Press" },
+        { "id": 26, "name": "Weighted Push-Up" },
+        { "id": 27, "name": "Dumbbell Incline Bench Press" }
+      ]
+    },
+    {
+      "name": "Shoulders",
+      "exercises": [
+        { "id": 28, "name": "Kettlebell Face-Pull" },
+        { "id": 29, "name": "Barbell Overhead Press" },
+        { "id": 30, "name": "Half-Kneeling Kettlebell Press" },
+        { "id": 31, "name": "Bottom-Up Kettlebell Press" },
+        { "id": 32, "name": "Half-Kneeling Kettlebell Halo" }
+      ]
+    },
+    {
+      "name": "Core",
+      "exercises": [
+        { "id": 33, "name": "Standing Pallof Press" },
+        { "id": 34, "name": "Side Plank with Needle Thread" }
+      ]
+    }
+  ]
+}
