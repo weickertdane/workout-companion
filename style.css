@@ -1,0 +1,237 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.5);
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    --success-color: #10b981;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Glassmorphism Classes */
+.glass-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.glass-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.highlight {
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+button {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    flex: 1;
+}
+
+.primary-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border: 1px solid var(--glass-border);
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ghost-btn {
+    background: transparent;
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.ghost-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Form Elements */
+.select-wrapper {
+    margin-bottom: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    appearance: none;
+    cursor: pointer;
+}
+
+select option {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+th {
+    font-family: var(--font-heading);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Utilities */
+.hidden {
+    display: none !important;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+#progress-fill {
+    height: 100%;
+    background: var(--success-color);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 1rem;
+}
+
+.card-header h2 {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}

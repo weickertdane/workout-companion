@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker Sync</title>
+    <meta name="description" content="PineTime Workout Companion App">
+    
+    <!-- Google Fonts: Outfit & Inter for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-header">
+            <h1>Workout<span class="highlight">Tracker</span></h1>
+            <p class="subtitle">PineTime Companion</p>
+        </header>
+
+        <main>
+            <!-- Connection Section -->
+            <section class="card glass-card">
+                <h2>Device Sync</h2>
+                <p id="status-text">Not connected to PineTime.</p>
+                <div class="button-group">
+                    <button id="btn-connect" class="primary-btn">Connect PineTime</button>
+                    <button id="btn-download-logs" class="secondary-btn" disabled>Download Logs</button>
+                </div>
+                <div id="progress-container" class="hidden">
+                    <div class="progress-bar"><div id="progress-fill"></div></div>
+                    <p id="progress-text">0%</p>
+                </div>
+            </section>
+
+            <!-- Dashboard Section -->
+            <section class="card glass-card">
+                <h2>Progress Dashboard</h2>
+                <div class="select-wrapper">
+                    <select id="exercise-select">
+                        <option value="">Select an exercise...</option>
+                    </select>
+                </div>
+                <div class="chart-container">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section class="card glass-card">
+                <div class="card-header">
+                    <h2>Recent Sets</h2>
+                    <button id="btn-export-csv" class="ghost-btn">Export CSV</button>
+                </div>
+                <div class="table-container">
+                    <table id="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Exercise</th>
+                                <th>Weight (lbs)</th>
+                                <th>Reps</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-body">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Data synced exclusively via Web Bluetooth. No cloud storage.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
